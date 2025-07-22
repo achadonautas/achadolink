@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #2e3192; /* Azul escuro para contraste, pode ser adaptado */
+    --accent-shopee: #EE4D2D; /* Laranja da Shopee */
+    --accent-mercadolivre: #FFE600; /* Amarelo do Mercado Livre */
+    --accent-whatsapp: #25D366; /* Verde do WhatsApp */
+    --text-color: #f0f0f0; /* Cor do texto claro */
+    --background-gradient-start: #1a1a2e; /* Azul mais escuro para o gradiente */
+    --background-gradient-end: #0f0f1b; /* Azul ainda mais escuro */
+    --button-bg-light: #4CAF50; /* Um verde genérico para botões, se precisar */
+    --button-text-dark: #333;
+    --button-shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.08); /* Fundo translúcido para um visual moderno */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px var(--button-shadow);
+    text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+.profile-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.5); /* Borda ao redor da logo */
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px var(--button-shadow);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0 2px 5px var(--button-shadow);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color); /* Cor base para os botões */
+    color: white;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px var(--button-shadow);
+    border: none;
+    cursor: pointer;
+}
+
+.link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--button-shadow);
+    opacity: 0.9;
+}
+
+.button-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* Cores específicas para cada botão */
+.shopee-button {
+    background-color: var(--accent-shopee);
+}
+
+.mercado-livre-button {
+    background-color: var(--accent-mercadolivre);
+    color: var(--button-text-dark); /* Texto mais escuro para contraste no amarelo */
+}
+
+.whatsapp-button {
+    background-color: var(--accent-whatsapp);
+}
+
+.instagram-button {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px; /* Adiciona um pequeno espaçamento nas laterais em telas menores */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .profile-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .link-button {
+        font-size: 1em;
+        padding: 12px 15px;
+        margin: 10px 0;
+    }
+
+    .button-icon {
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,229 @@
+/* Variáveis CSS para Cupons e Botões */
+:root {
+    --accent-mercadolivre: #ffe600; /* Amarelo Mercado Livre */
+    --accent-shopee: #ee4d2d; /* Laranja Shopee */
+    --button-text-dark: #333; /* Texto escuro para botões claros */
+    --text-color: #f0f0f0; /* Cor padrão do texto (clara para fundo escuro) */
+    --button-shadow: rgba(0, 0, 0, 0.4); /* Sombra para botões e cards */
+
+    /* Variáveis para o botão "Copiar" (secundário) - CORES AJUSTADAS PARA MAIOR VISIBILIDADE */
+    --accent-button-secondary: #007bff; /* Azul vibrante (pode ser ajustado) */
+    --accent-button-secondary-hover: #0056b3; /* Azul mais escuro no hover */
+    --button-text-light: #ffffff; /* Texto branco para botões escuros */
+    --accent-button-border: #0056b3; /* Borda para o botão secundário */
+    --accent-button-border-hover: #003e80; /* Borda no hover */
+}
+
+
+/* Seções de Cupons */
+.coupon-section {
+    padding: 20px 0;
+}
+
+.coupon-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil para os cards */
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--button-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.coupon-card:hover {
+    transform: translateY(-5px);
+}
+
+.coupon-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.coupon-card p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 15px; 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coupon-code {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #ffe600; /* Destaque para o código do cupom */
+    letter-spacing: 1px;
+    display: inline-block; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
+/* Estilos para o botão principal de ação (Ir para o Mercado Livre/Shopee) */
+.coupon-button {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px var(--button-shadow);
+    border: none; 
+}
+
+/* Estilos para o botão "Copiar" */
+.coupon-copy-button {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px; 
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9em; 
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px var(--button-shadow); 
+    cursor: pointer; 
+
+    /* CORES CORRIGIDAS PARA MAIOR VISIBILIDADE E CONSISTÊNCIA */
+    background-color: var(--accent-button-secondary); 
+    color: var(--button-text-light); 
+    border: 1px solid var(--accent-button-border); 
+    
+    /* REMOVIDO margin-right AQUI, O GAP DO CONTAINER FARÁ O TRABALHO */
+}
+
+.coupon-copy-button:hover {
+    background-color: var(--accent-button-secondary-hover);
+    transform: translateY(-1px); 
+    border-color: var(--accent-button-border-hover);
+}
+
+
+/* Cores específicas para os botões e cards de cupom - Mercado Livre */
+.mercadolivre-coupon {
+    background-color: rgba(255, 230, 0, 0.2); 
+    border-color: var(--accent-mercadolivre);
+}
+.mercadolivre-coupon .coupon-button {
+    background-color: var(--accent-mercadolivre);
+    color: var(--button-text-dark);
+    border: none; 
+}
+.mercadolivre-coupon .coupon-button:hover {
+    background-color: #ffda00; 
+}
+
+
+/* Cores específicas para os botões e cards de cupom - Shopee */
+.shopee-coupon {
+    background-color: rgba(238, 77, 45, 0.2); 
+    border-color: var(--accent-shopee);
+}
+.shopee-coupon .coupon-button {
+    background-color: var(--accent-shopee);
+    color: white;
+    border: none; 
+}
+.shopee-coupon .coupon-button:hover {
+    background-color: #d14427; 
+}
+
+
+/* Botão Voltar para o Início */
+.back-button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 2px 5px var(--button-shadow);
+    border: none; 
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Container de botões (para organizar "Copiar" e "Ir para") */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px; /* AUMENTADO O ESPAÇAMENTO AQUI para ser mais visível */
+    margin-top: 15px; /* Margem do grupo de botões em relação ao conteúdo acima */
+    margin-bottom: 5px; /* Pequena margem abaixo do grupo de botões, se necessário */
+}
+
+/* Responsividade para cupons */
+@media (max-width: 991px) { /* Tablet - telas menores que 'lg' */
+    .coupon-card {
+        padding: 20px; 
+    }
+    .coupon-card h2 {
+        font-size: 1.5em;
+    }
+    .coupon-card p {
+        font-size: 0.95em;
+    }
+    .coupon-button, .coupon-copy-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+    .button-container {
+        gap: 10px; /* Reduz o gap em telas menores para não ficar muito espaçado */
+    }
+}
+
+@media (max-width: 767px) { /* Mobile - telas menores que 'md' */
+    .coupon-card h2 {
+        font-size: 1.4em;
+    }
+    .coupon-card p {
+        font-size: 0.9em;
+    }
+    .coupon-code {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    .button-container {
+        flex-direction: column; /* Empilha os botões em telas pequenas */
+        gap: 8px; /* Espaçamento vertical quando empilhados */
+    }
+    .coupon-button, .coupon-copy-button {
+        width: 100%; /* Faz os botões ocuparem 100% da largura em mobile */
+        /* margin-left: 0; */ /* Já deve ser 0 por padrão quando empilhado */
+        /* margin-right: 0; */ /* Já deve ser 0 por padrão quando empilhado */
+    }
+}
+
+/* Opcional: Ajuste para o padding geral do container-fluid se necessário */
+.container-fluid {
+    padding: 0 15px; 
+}
+@media (min-width: 1200px) { 
+    .container-fluid {
+        padding: 0 30px; 
+    }
+}

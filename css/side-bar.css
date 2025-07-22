@@ -1,0 +1,31 @@
+/* Conteúdo de CSS/side-bar.css */
+
+.ads-sidebar {
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 50px; /* Espaço para baixo do topo da página */
+    /* background-color: rgba(255, 255, 255, 0.02); /* Fundo muito sutil, quase invisível */ */
+    border-radius: 10px; /* Cantos arredondados */
+    text-align: center; /* Centraliza o conteúdo dentro da sidebar */
+    height: auto; /* Garante que a altura se ajuste ao conteúdo */
+    min-height: 200px; /* Altura mínima para o espaço ser visível no layout */
+}
+
+/* Opcional: para o texto "Espaço para Anúncio" */
+.ads-sidebar p {
+    color: rgba(255,255,255,0.3); /* Texto bem clarinho */
+    font-size: 0.8em;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Opcional: para os blocos de div que contêm o placeholder */
+.ads-sidebar > div {
+    border: 1px dashed rgba(255, 255, 255, 0.1); /* Uma borda pontilhada bem fraca */
+}
+
+/* Media query para ajustar o espaçamento em telas menores, se necessário */
+@media (max-width: 991px) { /* Para telas menores que 'lg' do Bootstrap */
+    .ads-sidebar {
+        margin-top: 20px; /* Reduz o margin-top quando as sidebars não estão visíveis */
+    }
+}

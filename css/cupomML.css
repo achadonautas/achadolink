@@ -1,0 +1,239 @@
+/* Este arquivo contém TODOS os estilos para os cupons do Mercado Livre */
+
+/* Variáveis CSS para Cupons e Botões */
+:root {
+    --accent-mercadolivre: #ffe600;
+    --accent-shopee: #ee4d2d; /* Não usado diretamente, mas mantido */
+    --button-text-dark: #333;
+    --text-color: #f0f0f0;
+    --button-shadow: rgba(0, 0, 0, 0.4);
+    --accent-button-secondary: #007bff;
+    --accent-button-secondary-hover: #0056b3;
+    --button-text-light: #ffffff;
+    --accent-button-border: #0056b3;
+    --accent-button-border-hover: #003e80;
+}
+
+/* Seções de Cupons - Regras Gerais para Cards */
+.coupon-section {
+    padding: 20px 0;
+}
+
+.coupon-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px; /* Padding geral do card para torná-lo mais estreito verticalmente */
+    text-align: center;
+    box-shadow: 0 5px 15px var(--button-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coupon-card:hover {
+    transform: translateY(-5px);
+}
+
+.coupon-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px; /* Margem inferior do título para verticalidade */
+}
+
+.coupon-card p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 15px; /* Margem inferior do parágrafo para verticalidade */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coupon-code {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #ffe600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Margem inferior do código para verticalidade */
+}
+
+/* Container de botões (para organizar "Copiar" e "Ir para") */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: auto;
+    padding-top: 15px; /* Padding acima dos botões para espaçamento vertical */
+    width: 100%;
+}
+
+/* Estilos para o botão principal de ação (Ir para...) - LARGURA RESTAURADA */
+.coupon-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px; /* Padding para altura e largura interna */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em; /* Tamanho da fonte */
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px var(--button-shadow);
+    border: none;
+    white-space: nowrap;
+    width: 125px; /* LARGURA RESTAURADA para ser mais amplo */
+    flex-shrink: 0;
+}
+
+/* Estilos para o botão "Copiar" - LARGURA RESTAURADA */
+.coupon-copy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px; /* Mesmo padding para altura uniforme */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em; /* Mesma fonte */
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px var(--button-shadow);
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100px; /* LARGURA RESTAURADA - um pouco menor que o de ação */
+    flex-shrink: 0;
+    background-color: var(--accent-button-secondary);
+    color: var(--button-text-light);
+    border: 1px solid var(--accent-button-border);
+}
+
+.coupon-copy-button:hover {
+    background-color: var(--accent-button-secondary-hover);
+    transform: translateY(-1px);
+    border-color: var(--accent-button-border-hover);
+}
+
+/* Cores específicas para Mercado Livre */
+.mercadolivre-coupon {
+    background-color: #3f3f4e;
+    border-color: var(--accent-mercadolivre);
+}
+
+.mercadolivre-coupon .coupon-action-button.mercado-livre-button {
+    background-color: var(--accent-mercadolivre);
+    color: var(--button-text-dark);
+}
+
+.mercadolivre-coupon .coupon-action-button.mercado-livre-button:hover {
+    background-color: #ffda00;
+}
+
+/* Botão Voltar para o Início */
+.back-button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 2px 5px var(--button-shadow);
+    border: none;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 991px) {
+    .coupon-card {
+        padding: 18px; /* Mais compacto em tablets */
+    }
+    .coupon-card h2 {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+    }
+    .coupon-card p {
+        font-size: 0.95em;
+        margin-bottom: 12px;
+    }
+    .coupon-code {
+        padding: 6px 12px;
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    /* Largura ajustada para tablets */
+    .coupon-action-button {
+        padding: 10px 12px;
+        font-size: 0.95em;
+        width: 110px; /* LARGURA AJUSTADA PARA TABLET */
+    }
+    .coupon-copy-button {
+        padding: 10px 12px;
+        font-size: 0.95em;
+        width: 85px; /* LARGURA AJUSTADA PARA TABLET */
+    }
+    .button-container {
+        gap: 8px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .coupon-card h2 {
+        font-size: 1.4em;
+        margin-bottom: 6px;
+    }
+    .coupon-card p {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+    .coupon-code {
+        padding: 6px 12px;
+        font-size: 0.9em;
+        margin-bottom: 6px;
+    }
+    .button-container {
+        flex-direction: column;
+        gap: 6px;
+        padding-top: 6px;
+    }
+    /* Botões empilhados em mobile */
+    .coupon-action-button, .coupon-copy-button {
+        width: 100%;
+        max-width: 250px; /* Limite de largura para não ficar muito largo */
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+    .coupon-card {
+        align-items: stretch;
+    }
+}
+
+.container-fluid {
+    padding: 0 15px;
+}
+@media (min-width: 1200px) {
+    .container-fluid {
+        padding: 0 30px;
+    }
+}
